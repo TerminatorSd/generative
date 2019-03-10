@@ -9,13 +9,13 @@ from inpaint_model import InpaintCAModel
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--image', default='../inpainting_upload/input.jpg', type=str,
+parser.add_argument('--image', default='./examples/input.jpg', type=str,
                     help='The filename of image to be completed.')
-parser.add_argument('--mask', default='', type=str,
+parser.add_argument('--mask', default='./examples/white_zero_mask.jpg', type=str,
                     help='The filename of mask, value 255 indicates mask.')
-parser.add_argument('--output', default='../inpainting_result/gi_out.png', type=str,
+parser.add_argument('--output', default='./examples/gi_out.png', type=str,
                     help='Where to write output.')
-parser.add_argument('--checkpoint_dir', default='model_logs/release_places2_256', type=str,
+parser.add_argument('--checkpoint_dir', default='model_logs/ddy_sd', type=str,
                     help='The directory of tensorflow checkpoint.')
 
 
