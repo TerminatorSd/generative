@@ -3,7 +3,11 @@ import os
 from random import shuffle
 
 parser = argparse.ArgumentParser()
+<<<<<<< HEAD
 parser.add_argument('--folder_path', default='../training_data/', type=str,
+=======
+parser.add_argument('--folder_path', default='./training_data/', type=str,
+>>>>>>> 2c1af5187542da8ddc47b9a7a75bd1acd2b78c40
                     help='The folder path')
 parser.add_argument('--train_filename', default='./data_flist/train_shuffled.flist', type=str,
                     help='The train filename.')
