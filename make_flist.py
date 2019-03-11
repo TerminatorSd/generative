@@ -3,7 +3,7 @@ import os
 from random import shuffle
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--folder_path', default='../ganCode/data/places2', type=str,
+parser.add_argument('--folder_path', default='./training_data/', type=str,
                     help='The folder path')
 parser.add_argument('--train_filename', default='./data_flist/train_shuffled.flist', type=str,
                     help='The train filename.')
