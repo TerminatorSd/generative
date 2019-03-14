@@ -35,6 +35,9 @@ if __name__ == "__main__":
     else:
         ng.get_gpus(config.NUM_GPUS)
 
+    # use gpu
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
     # training data
     with open(config.DATA_FLIST[config.DATASET][0]) as f:
         fnames = f.read().splitlines()
