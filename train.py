@@ -111,7 +111,7 @@ if __name__ == "__main__":
         trainer.add_callbacks(discriminator_training_callback)
     trainer.add_callbacks([
         ng.callbacks.WeightsViewer(),
-        ng.callbacks.ModelRestorer(trainer.context['saver'], dump_prefix='model_logs/'+config.MODEL_RESTORE+'/snap', optimistic=True),
+        ng.callbacks.ModelRestorer(trainer.context['saver'], dump_prefix='models/'+config.MODEL_RESTORE+'/snap', optimistic=True),
         ng.callbacks.ModelSaver(config.TRAIN_SPE, trainer.context['saver'], log_prefix+'/snap'),
         ng.callbacks.SummaryWriter((config.VAL_PSTEPS//1), trainer.context['summary_writer'], tf.summary.merge_all()),
     ])
