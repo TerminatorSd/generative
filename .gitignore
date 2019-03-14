@@ -1,4 +1,5 @@
 models
+model_logs
 training_data
 neuralgym_logs
 data
