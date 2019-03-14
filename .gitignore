@@ -1,5 +1,6 @@
 models
-training_data
+model_logs
+training_data*
 neuralgym_logs
 data
 .DS_Store
