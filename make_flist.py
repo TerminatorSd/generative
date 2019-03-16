@@ -26,12 +26,20 @@ if __name__ == "__main__":
 
     # append all files into 2 lists
     for training_dir in training_dirs:
-        # append each file into the list file names
         training_folder = os.listdir(args.folder_path + "/training" + "/" + training_dir)
         for training_item in training_folder:
             # modify to full path -> directory
             training_item = args.folder_path + "/training" + "/" + training_dir + "/" + training_item
-            training_file_names.append(training_item)
+
+            # one more search for folders
+            if os.path.isfile(training_item):
+                training_file_names.append(training_item)
+            else:
+                inner_folder = os.listdir(training_item)
+                for inner_item in inner_folder:
+                    inner_item = training_item + "/" + inner_item
+                    training_file_names.append(inner_item)
+
 
     # append all files into 2 lists
     for validation_dir in validation_dirs:
