@@ -7,4 +7,5 @@ data
 training_data
 data_flist
 __pycache__
+__pycache__
 .idea
