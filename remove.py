@@ -38,5 +38,5 @@ def all_path(dirname):
 
   # return result
 
-all_path('./dog')
+all_path('./training_data')
 # print(all_path('/Users/shaodong/myGit/ganCode/data/ImgNet/dog/folder3/'))

@@ -339,3 +339,339 @@ Traceback (most recent call last):
   File "train.py", line 6, in <module>
     import tensorflow as tf
 ImportError: No module named tensorflow
+[32m[2019-03-17 10:59:19 @__init__.py:79][0m Set root logger. Unset logger with neuralgym.unset_logger().
+[32m[2019-03-17 10:59:19 @__init__.py:80][0m Saving logging to file: neuralgym_logs/20190317105919676416.
+[32m[2019-03-17 10:59:29 @config.py:92][0m ---------------------------------- APP CONFIG ----------------------------------
+[32m[2019-03-17 10:59:29 @config.py:119][0m MAX_ITERS: 100000
+[32m[2019-03-17 10:59:29 @config.py:119][0m RANDOM_CROP: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m IMG_SHAPES: [256, 256, 3]
+[32m[2019-03-17 10:59:29 @config.py:119][0m STATIC_VIEW_SIZE: 30
+[32m[2019-03-17 10:59:29 @config.py:119][0m FEATURE_LOSS: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m VIZ_MAX_OUT: 10
+[32m[2019-03-17 10:59:29 @config.py:119][0m MAX_DELTA_HEIGHT: 32
+[32m[2019-03-17 10:59:29 @config.py:119][0m GRADS_SUMMARY: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m AE_LOSS: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m COARSE_L1_ALPHA: 1.2
+[32m[2019-03-17 10:59:29 @config.py:119][0m L1_LOSS: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m GAN_WITH_MASK: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m GRAMS_LOSS_ALPHA: 50
+[32m[2019-03-17 10:59:29 @config.py:119][0m LOAD_VGG_MODEL: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m TRAIN_SPE: 1000
+[32m[2019-03-17 10:59:29 @config.py:119][0m MAX_DELTA_WIDTH: 32
+[32m[2019-03-17 10:59:29 @config.py:119][0m HORIZONTAL_MARGIN: 0
+[32m[2019-03-17 10:59:29 @config.py:119][0m MODEL_RESTORE: release_imagenet_256
+[32m[2019-03-17 10:59:29 @config.py:119][0m LOG_DIR: full_model_celeba_hq_256
+[32m[2019-03-17 10:59:29 @config.py:119][0m PADDING: SAME
+[32m[2019-03-17 10:59:29 @config.py:111][0m DATA_FLIST: 
+[32m[2019-03-17 10:59:29 @config.py:119][0m   celeba: ['data/celeba/train_shuffled.flist', 'data/celeba/validation_static_view.flist']
+[32m[2019-03-17 10:59:29 @config.py:119][0m   places2: ['data/places2/train_shuffled.flist', 'data/places2/validation_static_view.flist']
+[32m[2019-03-17 10:59:29 @config.py:119][0m   imagenet: ['data/imagenet/train_shuffled.flist', 'data/imagenet/validation_static_view.flist']
+[32m[2019-03-17 10:59:29 @config.py:119][0m   celebahq: ['data/celeba_hq/train_shuffled.flist', 'data/celeba_hq/validation_static_view.flist']
+[32m[2019-03-17 10:59:29 @config.py:119][0m   mine: ['data_flist/train_shuffled.flist', 'data_flist/validation_shuffled.flist']
+[32m[2019-03-17 10:59:29 @config.py:119][0m VAL_PSTEPS: 1000
+[32m[2019-03-17 10:59:29 @config.py:119][0m HEIGHT: 128
+[32m[2019-03-17 10:59:29 @config.py:119][0m VERTICAL_MARGIN: 0
+[32m[2019-03-17 10:59:29 @config.py:119][0m VGG_MODEL_FILE: vgg/vgg16_weights.npz
+[32m[2019-03-17 10:59:29 @config.py:119][0m GAN_LOSS_ALPHA: 0.001
+[32m[2019-03-17 10:59:29 @config.py:119][0m GPU_ID: 0
+[32m[2019-03-17 10:59:29 @config.py:119][0m DISCOUNTED_MASK: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m TV_LOSS: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m GRADIENT_CLIP_VALUE: 0.1  
+[32m[2019-03-17 10:59:29 @config.py:119][0m GRADIENT_CLIP: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m GAN: wgan_gp
+[32m[2019-03-17 10:59:29 @config.py:119][0m GLOBAL_DCGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 10:59:29 @config.py:119][0m z: 0.9
+[32m[2019-03-17 10:59:29 @config.py:119][0m BATCH_SIZE: 16
+[32m[2019-03-17 10:59:29 @config.py:119][0m TV_LOSS_ALPHA: 0.0
+[32m[2019-03-17 10:59:29 @config.py:119][0m DATASET: mine
+[32m[2019-03-17 10:59:29 @config.py:119][0m VAL: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m WIDTH: 128
+[32m[2019-03-17 10:59:29 @config.py:119][0m GRAMS_LOSS: True
+[32m[2019-03-17 10:59:29 @config.py:119][0m NUM_GPUS: 1
+[32m[2019-03-17 10:59:29 @config.py:119][0m AE_LOSS_ALPHA: 1.2
+[32m[2019-03-17 10:59:29 @config.py:119][0m FEATURE_LOSS_ALPHA: 0.01
+[32m[2019-03-17 10:59:29 @config.py:119][0m L1_LOSS_ALPHA: 1.2
+[32m[2019-03-17 10:59:29 @config.py:119][0m GLOBAL_WGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 10:59:29 @config.py:119][0m RANDOM_SEED: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m PRETRAIN_COARSE_NETWORK: False
+[32m[2019-03-17 10:59:29 @config.py:119][0m WGAN_GP_LAMBDA: 10
+[32m[2019-03-17 10:59:29 @config.py:94][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 10:59:29 @gpus.py:20][0m Set env: CUDA_VISIBLE_DEVICES=[0].
+[32m[2019-03-17 10:59:29 @dataset.py:26][0m --------------------------------- Dataset Info ---------------------------------
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m random_crop: False
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m random: False
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m enqueue_size: 32
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m fn_preprocess: None
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m filetype: image
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m queue_size: 256
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m shapes: [[256, 256, 3]]
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m nthreads: 16
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m return_fnames: False
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m file_length: 4420
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m dtypes: [tf.float32]
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m index: 0
+[32m[2019-03-17 10:59:29 @dataset.py:36][0m batch_phs: [<tf.Tensor 'Placeholder:0' shape=(?, 256, 256, 3) dtype=float32>]
+[32m[2019-03-17 10:59:29 @dataset.py:37][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 10:59:32 @inpaint_model.py:159][0m Set batch_predicted to x2.
+Traceback (most recent call last):
+  File "train.py", line 52, in <module>
+    images, config=config)
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_model.py", line 171, in build_graph_with_losses
+    losses['l1_loss'] = l1_alpha * tf.reduce_mean(tf.abs(local_patch_batch_pos - local_patch_x1)*spatial_discounting_mask(config))
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_ops.py", line 198, in spatial_discounting_mask
+    gamma = config.SPATIAL_DISCOUNTING_GAMMA
+  File "/usr/local/lib/python3.5/dist-packages/neuralgym/utils/config.py", line 97, in __getattr__
+    value = self._cfg_dict[name]
+KeyError: 'SPATIAL_DISCOUNTING_GAMMA'
+[32m[2019-03-17 11:02:10 @__init__.py:79][0m Set root logger. Unset logger with neuralgym.unset_logger().
+[32m[2019-03-17 11:02:10 @__init__.py:80][0m Saving logging to file: neuralgym_logs/20190317110210071000.
+[32m[2019-03-17 11:02:12 @config.py:92][0m ---------------------------------- APP CONFIG ----------------------------------
+[32m[2019-03-17 11:02:12 @config.py:119][0m HEIGHT: 128
+[32m[2019-03-17 11:02:12 @config.py:119][0m MAX_DELTA_HEIGHT: 32
+[32m[2019-03-17 11:02:12 @config.py:119][0m STATIC_VIEW_SIZE: 30
+[32m[2019-03-17 11:02:12 @config.py:111][0m DATA_FLIST: 
+[32m[2019-03-17 11:02:12 @config.py:119][0m   mine: ['data_flist/train_shuffled.flist', 'data_flist/validation_shuffled.flist']
+[32m[2019-03-17 11:02:12 @config.py:119][0m   imagenet: ['data/imagenet/train_shuffled.flist', 'data/imagenet/validation_static_view.flist']
+[32m[2019-03-17 11:02:12 @config.py:119][0m   celeba: ['data/celeba/train_shuffled.flist', 'data/celeba/validation_static_view.flist']
+[32m[2019-03-17 11:02:12 @config.py:119][0m   celebahq: ['data/celeba_hq/train_shuffled.flist', 'data/celeba_hq/validation_static_view.flist']
+[32m[2019-03-17 11:02:12 @config.py:119][0m   places2: ['data/places2/train_shuffled.flist', 'data/places2/validation_static_view.flist']
+[32m[2019-03-17 11:02:12 @config.py:119][0m GAN_WITH_MASK: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m GRAMS_LOSS_ALPHA: 50
+[32m[2019-03-17 11:02:12 @config.py:119][0m IMG_SHAPES: [256, 256, 3]
+[32m[2019-03-17 11:02:12 @config.py:119][0m DATASET: mine
+[32m[2019-03-17 11:02:12 @config.py:119][0m L1_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:02:12 @config.py:119][0m MAX_ITERS: 100000
+[32m[2019-03-17 11:02:12 @config.py:119][0m FEATURE_LOSS: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m VIZ_MAX_OUT: 10
+[32m[2019-03-17 11:02:12 @config.py:119][0m AE_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:02:12 @config.py:119][0m TV_LOSS: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m GAN_LOSS_ALPHA: 0.001
+[32m[2019-03-17 11:02:12 @config.py:119][0m LOG_DIR: full_model_celeba_hq_256
+[32m[2019-03-17 11:02:12 @config.py:119][0m COARSE_L1_ALPHA: 1.2
+[32m[2019-03-17 11:02:12 @config.py:119][0m GRAMS_LOSS: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m DISCOUNTED_MASK: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m MODEL_RESTORE: release_imagenet_256
+[32m[2019-03-17 11:02:12 @config.py:119][0m VGG_MODEL_FILE: vgg/vgg16_weights.npz
+[32m[2019-03-17 11:02:12 @config.py:119][0m HORIZONTAL_MARGIN: 0
+[32m[2019-03-17 11:02:12 @config.py:119][0m VAL: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m MAX_DELTA_WIDTH: 32
+[32m[2019-03-17 11:02:12 @config.py:119][0m AE_LOSS: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m VERTICAL_MARGIN: 0
+[32m[2019-03-17 11:02:12 @config.py:119][0m BATCH_SIZE: 16
+[32m[2019-03-17 11:02:12 @config.py:119][0m GPU_ID: 0
+[32m[2019-03-17 11:02:12 @config.py:119][0m GAN: wgan_gp
+[32m[2019-03-17 11:02:12 @config.py:119][0m VAL_PSTEPS: 1000
+[32m[2019-03-17 11:02:12 @config.py:119][0m NUM_GPUS: 1
+[32m[2019-03-17 11:02:12 @config.py:119][0m z: 0.9
+[32m[2019-03-17 11:02:12 @config.py:119][0m GLOBAL_WGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:02:12 @config.py:119][0m PRETRAIN_COARSE_NETWORK: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m RANDOM_SEED: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m GLOBAL_DCGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:02:12 @config.py:119][0m WIDTH: 128
+[32m[2019-03-17 11:02:12 @config.py:119][0m RANDOM_CROP: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m LOAD_VGG_MODEL: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m TRAIN_SPE: 1000
+[32m[2019-03-17 11:02:12 @config.py:119][0m L1_LOSS: True
+[32m[2019-03-17 11:02:12 @config.py:119][0m WGAN_GP_LAMBDA: 10
+[32m[2019-03-17 11:02:12 @config.py:119][0m GRADIENT_CLIP: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m FEATURE_LOSS_ALPHA: 0.01
+[32m[2019-03-17 11:02:12 @config.py:119][0m TV_LOSS_ALPHA: 0.0
+[32m[2019-03-17 11:02:12 @config.py:119][0m PADDING: SAME
+[32m[2019-03-17 11:02:12 @config.py:119][0m GRADS_SUMMARY: False
+[32m[2019-03-17 11:02:12 @config.py:119][0m GRADIENT_CLIP_VALUE: 0.1  
+[32m[2019-03-17 11:02:12 @config.py:94][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:02:12 @gpus.py:20][0m Set env: CUDA_VISIBLE_DEVICES=[0].
+[32m[2019-03-17 11:02:12 @dataset.py:26][0m --------------------------------- Dataset Info ---------------------------------
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m file_length: 4420
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m index: 0
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m return_fnames: False
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m dtypes: [tf.float32]
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m filetype: image
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m random: False
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m fn_preprocess: None
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m nthreads: 16
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m shapes: [[256, 256, 3]]
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m batch_phs: [<tf.Tensor 'Placeholder:0' shape=(?, 256, 256, 3) dtype=float32>]
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m random_crop: False
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m enqueue_size: 32
+[32m[2019-03-17 11:02:12 @dataset.py:36][0m queue_size: 256
+[32m[2019-03-17 11:02:12 @dataset.py:37][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:02:14 @inpaint_model.py:159][0m Set batch_predicted to x2.
+Traceback (most recent call last):
+  File "train.py", line 52, in <module>
+    images, config=config)
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_model.py", line 171, in build_graph_with_losses
+    losses['l1_loss'] = l1_alpha * tf.reduce_mean(tf.abs(local_patch_batch_pos - local_patch_x1)*spatial_discounting_mask(config))
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_ops.py", line 198, in spatial_discounting_mask
+    gamma = config.SPATIAL_DISCOUNTING_GAMMA
+  File "/usr/local/lib/python3.5/dist-packages/neuralgym/utils/config.py", line 97, in __getattr__
+    value = self._cfg_dict[name]
+KeyError: 'SPATIAL_DISCOUNTING_GAMMA'
+[32m[2019-03-17 11:03:03 @__init__.py:79][0m Set root logger. Unset logger with neuralgym.unset_logger().
+[32m[2019-03-17 11:03:03 @__init__.py:80][0m Saving logging to file: neuralgym_logs/20190317110303883359.
+[32m[2019-03-17 11:03:06 @config.py:92][0m ---------------------------------- APP CONFIG ----------------------------------
+[32m[2019-03-17 11:03:06 @config.py:119][0m MAX_DELTA_WIDTH: 32
+[32m[2019-03-17 11:03:06 @config.py:119][0m GLOBAL_WGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:03:06 @config.py:119][0m VERTICAL_MARGIN: 0
+[32m[2019-03-17 11:03:06 @config.py:119][0m VGG_MODEL_FILE: vgg/vgg16_weights.npz
+[32m[2019-03-17 11:03:06 @config.py:119][0m GRADIENT_CLIP: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m DATASET: mine
+[32m[2019-03-17 11:03:06 @config.py:119][0m WIDTH: 128
+[32m[2019-03-17 11:03:06 @config.py:119][0m PADDING: SAME
+[32m[2019-03-17 11:03:06 @config.py:119][0m GAN: wgan_gp
+[32m[2019-03-17 11:03:06 @config.py:119][0m AE_LOSS: True
+[32m[2019-03-17 11:03:06 @config.py:119][0m VIZ_MAX_OUT: 10
+[32m[2019-03-17 11:03:06 @config.py:119][0m GRAMS_LOSS_ALPHA: 50
+[32m[2019-03-17 11:03:06 @config.py:119][0m HEIGHT: 128
+[32m[2019-03-17 11:03:06 @config.py:119][0m AE_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:03:06 @config.py:119][0m MAX_DELTA_HEIGHT: 32
+[32m[2019-03-17 11:03:06 @config.py:119][0m TV_LOSS_ALPHA: 0.0
+[32m[2019-03-17 11:03:06 @config.py:119][0m MAX_ITERS: 100000
+[32m[2019-03-17 11:03:06 @config.py:119][0m RANDOM_CROP: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m GRAMS_LOSS: True
+[32m[2019-03-17 11:03:06 @config.py:119][0m GRADS_SUMMARY: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m FEATURE_LOSS: True
+[32m[2019-03-17 11:03:06 @config.py:119][0m NUM_GPUS: 1
+[32m[2019-03-17 11:03:06 @config.py:119][0m MODEL_RESTORE: release_imagenet_256
+[32m[2019-03-17 11:03:06 @config.py:119][0m VAL_PSTEPS: 1000
+[32m[2019-03-17 11:03:06 @config.py:119][0m COARSE_L1_ALPHA: 1.2
+[32m[2019-03-17 11:03:06 @config.py:119][0m RANDOM_SEED: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m WGAN_GP_LAMBDA: 10
+[32m[2019-03-17 11:03:06 @config.py:119][0m DISCOUNTED_MASK: True
+[32m[2019-03-17 11:03:06 @config.py:119][0m VAL: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m GAN_WITH_MASK: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m TV_LOSS: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m L1_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:03:06 @config.py:119][0m GAN_LOSS_ALPHA: 0.001
+[32m[2019-03-17 11:03:06 @config.py:119][0m IMG_SHAPES: [256, 256, 3]
+[32m[2019-03-17 11:03:06 @config.py:119][0m PRETRAIN_COARSE_NETWORK: False
+[32m[2019-03-17 11:03:06 @config.py:119][0m z: 0.9
+[32m[2019-03-17 11:03:06 @config.py:119][0m TRAIN_SPE: 1000
+[32m[2019-03-17 11:03:06 @config.py:119][0m HORIZONTAL_MARGIN: 0
+[32m[2019-03-17 11:03:06 @config.py:119][0m FEATURE_LOSS_ALPHA: 0.01
+[32m[2019-03-17 11:03:06 @config.py:119][0m L1_LOSS: True
+[32m[2019-03-17 11:03:06 @config.py:119][0m GRADIENT_CLIP_VALUE: 0.1  
+[32m[2019-03-17 11:03:06 @config.py:119][0m LOG_DIR: full_model_celeba_hq_256
+[32m[2019-03-17 11:03:06 @config.py:119][0m BATCH_SIZE: 16
+[32m[2019-03-17 11:03:06 @config.py:119][0m GLOBAL_DCGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:03:06 @config.py:111][0m DATA_FLIST: 
+[32m[2019-03-17 11:03:06 @config.py:119][0m   celeba: ['data/celeba/train_shuffled.flist', 'data/celeba/validation_static_view.flist']
+[32m[2019-03-17 11:03:06 @config.py:119][0m   places2: ['data/places2/train_shuffled.flist', 'data/places2/validation_static_view.flist']
+[32m[2019-03-17 11:03:06 @config.py:119][0m   mine: ['data_flist/train_shuffled.flist', 'data_flist/validation_shuffled.flist']
+[32m[2019-03-17 11:03:06 @config.py:119][0m   imagenet: ['data/imagenet/train_shuffled.flist', 'data/imagenet/validation_static_view.flist']
+[32m[2019-03-17 11:03:06 @config.py:119][0m   celebahq: ['data/celeba_hq/train_shuffled.flist', 'data/celeba_hq/validation_static_view.flist']
+[32m[2019-03-17 11:03:06 @config.py:119][0m GPU_ID: 0
+[32m[2019-03-17 11:03:06 @config.py:119][0m STATIC_VIEW_SIZE: 30
+[32m[2019-03-17 11:03:06 @config.py:119][0m LOAD_VGG_MODEL: True
+[32m[2019-03-17 11:03:06 @config.py:94][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:03:06 @gpus.py:20][0m Set env: CUDA_VISIBLE_DEVICES=[0].
+[32m[2019-03-17 11:03:06 @dataset.py:26][0m --------------------------------- Dataset Info ---------------------------------
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m dtypes: [tf.float32]
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m fn_preprocess: None
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m batch_phs: [<tf.Tensor 'Placeholder:0' shape=(?, 256, 256, 3) dtype=float32>]
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m queue_size: 256
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m filetype: image
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m index: 0
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m shapes: [[256, 256, 3]]
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m return_fnames: False
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m random: False
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m nthreads: 16
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m random_crop: False
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m file_length: 4420
+[32m[2019-03-17 11:03:06 @dataset.py:36][0m enqueue_size: 32
+[32m[2019-03-17 11:03:06 @dataset.py:37][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:03:08 @inpaint_model.py:159][0m Set batch_predicted to x2.
+Traceback (most recent call last):
+  File "train.py", line 52, in <module>
+    images, config=config)
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_model.py", line 171, in build_graph_with_losses
+    losses['l1_loss'] = l1_alpha * tf.reduce_mean(tf.abs(local_patch_batch_pos - local_patch_x1)*spatial_discounting_mask(config))
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_ops.py", line 198, in spatial_discounting_mask
+    gamma = config.SPATIAL_DISCOUNTING_GAMMA
+  File "/usr/local/lib/python3.5/dist-packages/neuralgym/utils/config.py", line 97, in __getattr__
+    value = self._cfg_dict[name]
+KeyError: 'SPATIAL_DISCOUNTING_GAMMA'
+[32m[2019-03-17 11:04:50 @__init__.py:79][0m Set root logger. Unset logger with neuralgym.unset_logger().
+[32m[2019-03-17 11:04:50 @__init__.py:80][0m Saving logging to file: neuralgym_logs/20190317110450561673.
+[32m[2019-03-17 11:04:53 @config.py:92][0m ---------------------------------- APP CONFIG ----------------------------------
+[32m[2019-03-17 11:04:53 @config.py:119][0m GRADS_SUMMARY: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m L1_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:04:53 @config.py:119][0m HEIGHT: 128
+[32m[2019-03-17 11:04:53 @config.py:119][0m z: 0.9
+[32m[2019-03-17 11:04:53 @config.py:119][0m NUM_GPUS: 1
+[32m[2019-03-17 11:04:53 @config.py:111][0m DATA_FLIST: 
+[32m[2019-03-17 11:04:53 @config.py:119][0m   celebahq: ['data/celeba_hq/train_shuffled.flist', 'data/celeba_hq/validation_static_view.flist']
+[32m[2019-03-17 11:04:53 @config.py:119][0m   celeba: ['data/celeba/train_shuffled.flist', 'data/celeba/validation_static_view.flist']
+[32m[2019-03-17 11:04:53 @config.py:119][0m   imagenet: ['data/imagenet/train_shuffled.flist', 'data/imagenet/validation_static_view.flist']
+[32m[2019-03-17 11:04:53 @config.py:119][0m   mine: ['data_flist/train_shuffled.flist', 'data_flist/validation_shuffled.flist']
+[32m[2019-03-17 11:04:53 @config.py:119][0m   places2: ['data/places2/train_shuffled.flist', 'data/places2/validation_static_view.flist']
+[32m[2019-03-17 11:04:53 @config.py:119][0m VAL: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m MAX_DELTA_HEIGHT: 32
+[32m[2019-03-17 11:04:53 @config.py:119][0m RANDOM_CROP: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m VGG_MODEL_FILE: vgg/vgg16_weights.npz
+[32m[2019-03-17 11:04:53 @config.py:119][0m COARSE_L1_ALPHA: 1.2
+[32m[2019-03-17 11:04:53 @config.py:119][0m IMG_SHAPES: [256, 256, 3]
+[32m[2019-03-17 11:04:53 @config.py:119][0m VERTICAL_MARGIN: 0
+[32m[2019-03-17 11:04:53 @config.py:119][0m WGAN_GP_LAMBDA: 10
+[32m[2019-03-17 11:04:53 @config.py:119][0m MAX_DELTA_WIDTH: 32
+[32m[2019-03-17 11:04:53 @config.py:119][0m GAN_WITH_MASK: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m MODEL_RESTORE: release_imagenet_256
+[32m[2019-03-17 11:04:53 @config.py:119][0m GLOBAL_WGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:04:53 @config.py:119][0m VIZ_MAX_OUT: 10
+[32m[2019-03-17 11:04:53 @config.py:119][0m LOG_DIR: full_model_celeba_hq_256
+[32m[2019-03-17 11:04:53 @config.py:119][0m WIDTH: 128
+[32m[2019-03-17 11:04:53 @config.py:119][0m GAN_LOSS_ALPHA: 0.001
+[32m[2019-03-17 11:04:53 @config.py:119][0m AE_LOSS_ALPHA: 1.2
+[32m[2019-03-17 11:04:53 @config.py:119][0m GRADIENT_CLIP_VALUE: 0.1  
+[32m[2019-03-17 11:04:53 @config.py:119][0m GRAMS_LOSS_ALPHA: 50
+[32m[2019-03-17 11:04:53 @config.py:119][0m GPU_ID: 0
+[32m[2019-03-17 11:04:53 @config.py:119][0m LOAD_VGG_MODEL: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m GAN: wgan_gp
+[32m[2019-03-17 11:04:53 @config.py:119][0m L1_LOSS: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m GRAMS_LOSS: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m RANDOM_SEED: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m AE_LOSS: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m FEATURE_LOSS_ALPHA: 0.01
+[32m[2019-03-17 11:04:53 @config.py:119][0m TV_LOSS_ALPHA: 0.0
+[32m[2019-03-17 11:04:53 @config.py:119][0m DATASET: mine
+[32m[2019-03-17 11:04:53 @config.py:119][0m DISCOUNTED_MASK: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m FEATURE_LOSS: True
+[32m[2019-03-17 11:04:53 @config.py:119][0m MAX_ITERS: 100000
+[32m[2019-03-17 11:04:53 @config.py:119][0m TV_LOSS: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m TRAIN_SPE: 1000
+[32m[2019-03-17 11:04:53 @config.py:119][0m PRETRAIN_COARSE_NETWORK: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m VAL_PSTEPS: 1000
+[32m[2019-03-17 11:04:53 @config.py:119][0m GLOBAL_DCGAN_LOSS_ALPHA: 1.0
+[32m[2019-03-17 11:04:53 @config.py:119][0m BATCH_SIZE: 16
+[32m[2019-03-17 11:04:53 @config.py:119][0m STATIC_VIEW_SIZE: 30
+[32m[2019-03-17 11:04:53 @config.py:119][0m HORIZONTAL_MARGIN: 0
+[32m[2019-03-17 11:04:53 @config.py:119][0m GRADIENT_CLIP: False
+[32m[2019-03-17 11:04:53 @config.py:119][0m PADDING: SAME
+[32m[2019-03-17 11:04:53 @config.py:94][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:04:53 @gpus.py:20][0m Set env: CUDA_VISIBLE_DEVICES=[0].
+[32m[2019-03-17 11:04:53 @dataset.py:26][0m --------------------------------- Dataset Info ---------------------------------
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m filetype: image
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m random: False
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m file_length: 4420
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m fn_preprocess: None
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m batch_phs: [<tf.Tensor 'Placeholder:0' shape=(?, 256, 256, 3) dtype=float32>]
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m random_crop: False
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m queue_size: 256
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m nthreads: 16
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m enqueue_size: 32
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m return_fnames: False
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m index: 0
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m dtypes: [tf.float32]
+[32m[2019-03-17 11:04:53 @dataset.py:36][0m shapes: [[256, 256, 3]]
+[32m[2019-03-17 11:04:53 @dataset.py:37][0m --------------------------------------------------------------------------------
+[32m[2019-03-17 11:04:55 @inpaint_model.py:159][0m Set batch_predicted to x2.
+Traceback (most recent call last):
+  File "train.py", line 52, in <module>
+    images, config=config)
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_model.py", line 171, in build_graph_with_losses
+    losses['l1_loss'] = l1_alpha * tf.reduce_mean(tf.abs(local_patch_batch_pos - local_patch_x1)*spatial_discounting_mask(config))
+  File "/home/dc2-user/siuDong/ganCode/generative_inpainting/inpaint_ops.py", line 198, in spatial_discounting_mask
+    gamma = config.SPATIAL_DISCOUNTING_GAMMA
+  File "/usr/local/lib/python3.5/dist-packages/neuralgym/utils/config.py", line 97, in __getattr__
+    value = self._cfg_dict[name]
+KeyError: 'SPATIAL_DISCOUNTING_GAMMA'
