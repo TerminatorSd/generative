@@ -9,8 +9,8 @@ import neuralgym as ng
 from inpaint_model import InpaintCAModel
 
 # use gpu
-os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID' 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+# os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID' 
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 logger = logging.getLogger()
 
