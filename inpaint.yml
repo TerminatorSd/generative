@@ -3,7 +3,7 @@ DATASET: 'mine'  # 'tmnist', 'dtd', 'places2', 'celeba', 'celebahq', 'imagenet',
 RANDOM_CROP: False
 VAL: False
 LOG_DIR: empty_places2_style_feature
-MODEL_RESTORE: ''  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
+MODEL_RESTORE: 'pre_dog'  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
 
 GAN: 'wgan_gp'  # 'dcgan', 'lsgan', 'wgan_gp', 'one_wgan_gp'
 PRETRAIN_COARSE_NETWORK: False
