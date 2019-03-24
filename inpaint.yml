@@ -2,8 +2,8 @@
 DATASET: 'mine'  # 'tmnist', 'dtd', 'places2', 'celeba', 'celebahq', 'imagenet', 'cityscapes'
 RANDOM_CROP: False
 VAL: False
-LOG_DIR: pre_mine_style_dog
-MODEL_RESTORE: 'pre_dog'  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
+LOG_DIR: no_style_pls2
+MODEL_RESTORE: ''  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
 
 GAN: 'wgan_gp'  # 'dcgan', 'lsgan', 'wgan_gp', 'one_wgan_gp'
 PRETRAIN_COARSE_NETWORK: False
@@ -80,7 +80,7 @@ VGG_MODEL_FILE: vgg/vgg16_weights.npz
 # FEATURE_LOSS: False
 # GRAMS_LOSS: False
 FEATURE_LOSS: True
-GRAMS_LOSS: True
+GRAMS_LOSS: Flase
 TV_LOSS: False
 TV_LOSS_ALPHA: 0.
 FEATURE_LOSS_ALPHA: 0.01
