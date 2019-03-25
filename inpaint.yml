@@ -2,7 +2,7 @@
 DATASET: 'mine'  # 'tmnist', 'dtd', 'places2', 'celeba', 'celebahq', 'imagenet', 'cityscapes'
 RANDOM_CROP: False
 VAL: False
-LOG_DIR: no_style_pls2
+LOG_DIR: parallel_dilated
 MODEL_RESTORE: ''  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
 
 GAN: 'wgan_gp'  # 'dcgan', 'lsgan', 'wgan_gp', 'one_wgan_gp'
@@ -28,7 +28,7 @@ VIZ_MAX_OUT: 10
 GRADS_SUMMARY: False
 GRADIENT_CLIP: False
 GRADIENT_CLIP_VALUE: 0.1  
-VAL_PSTEPS: 1000
+VAL_PSTEPS: 10
 
 # data
 DATA_FLIST:
@@ -80,7 +80,7 @@ VGG_MODEL_FILE: vgg/vgg16_weights.npz
 # FEATURE_LOSS: False
 # GRAMS_LOSS: False
 FEATURE_LOSS: True
-GRAMS_LOSS: Flase
+GRAMS_LOSS: True
 TV_LOSS: False
 TV_LOSS_ALPHA: 0.
 FEATURE_LOSS_ALPHA: 0.01
