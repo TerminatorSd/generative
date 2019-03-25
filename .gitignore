@@ -9,4 +9,4 @@ data_flist
 __pycache__
 __pycache__
 .idea
-nohup.out
+./nohup*
