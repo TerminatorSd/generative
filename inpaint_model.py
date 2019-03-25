@@ -47,6 +47,7 @@ class InpaintCAModel(Model):
                 arg_scope([gen_conv, gen_deconv],
                           training=training, padding=padding):
             # stage1
+            # cnum表示输出的维数
             x = gen_conv(x, cnum, 5, 1, name='conv1')
             x = gen_conv(x, 2*cnum, 3, 2, name='conv2_downsample')
             x = gen_conv(x, 2*cnum, 3, 1, name='conv3')
@@ -54,10 +55,22 @@ class InpaintCAModel(Model):
             x = gen_conv(x, 4*cnum, 3, 1, name='conv5')
             x = gen_conv(x, 4*cnum, 3, 1, name='conv6')
             mask_s = resize_mask_like(mask, x)
-            x = gen_conv(x, 4*cnum, 3, rate=2, name='conv7_atrous')
-            x = gen_conv(x, 4*cnum, 3, rate=4, name='conv8_atrous')
-            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv9_atrous')
-            x = gen_conv(x, 4*cnum, 3, rate=16, name='conv10_atrous')
+
+            # 并联跨步卷积 start
+            x_first = x
+            x = gen_conv(x_first, 4*cnum, 3, rate=1, name='conv7_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=2, name='conv8_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=4, name='conv9_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv10_atrous_top')
+            first_top = x
+            x = gen_conv(x_first, 4*cnum, 3, rate=2, name='conv7_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=4, name='conv8_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv9_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=16, name='conv10_atrous_bottom')
+            first_bottom = x
+            x = tf.concat([first_top, first_bottom], 3)
+            # 并联跨步卷积 end
+            
             x = gen_conv(x, 4*cnum, 3, 1, name='conv11')
             x = gen_conv(x, 4*cnum, 3, 1, name='conv12')
             x = gen_deconv(x, 2*cnum, name='conv13_upsample')
@@ -175,6 +188,7 @@ class InpaintCAModel(Model):
         if not config.PRETRAIN_COARSE_NETWORK:
             losses['ae_loss'] += tf.reduce_mean(tf.abs(batch_pos - x2) * (1.-mask))
         losses['ae_loss'] /= tf.reduce_mean(1.-mask)
+        
         if summary:
             scalar_summary('losses/l1_loss', losses['l1_loss'])
             scalar_summary('losses/ae_loss', losses['ae_loss'])
