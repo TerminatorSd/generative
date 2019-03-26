@@ -10,8 +10,8 @@ import neuralgym as ng
 from inpaint_model import InpaintCAModel
 
 # use gpu
-# os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID' 
-# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID' 
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 logger = logging.getLogger()
 
@@ -34,11 +34,11 @@ def multigpu_graph_def(model, data, config, gpu_id=0, loss_type='g'):
 
 
 if __name__ == "__main__":
-    config = ng.Config('inpaint.yml').decode('utf-8')
-    if config.GPU_ID != -1:
-         ng.set_gpus(config.GPU_ID)
-    else:
-         ng.get_gpus(config.NUM_GPUS)
+    config = ng.Config('inpaint.yml')
+    # if config.GPU_ID != -1:
+    #      ng.set_gpus(config.GPU_ID)
+    # else:
+    #      ng.get_gpus(config.NUM_GPUS)
 
     # training data
     with open(config.DATA_FLIST[config.DATASET][0]) as f:
