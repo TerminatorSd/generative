@@ -34,7 +34,7 @@ def multigpu_graph_def(model, data, config, gpu_id=0, loss_type='g'):
 
 
 if __name__ == "__main__":
-    config = ng.Config('inpaint.yml')
+    config = ng.Config('inpaint.yml').decode('utf-8')
     if config.GPU_ID != -1:
          ng.set_gpus(config.GPU_ID)
     else:
