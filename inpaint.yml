@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # parameters
 DATASET: 'mine'  # 'tmnist', 'dtd', 'places2', 'celeba', 'celebahq', 'imagenet', 'cityscapes'
 RANDOM_CROP: False
