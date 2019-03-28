@@ -58,15 +58,15 @@ class InpaintCAModel(Model):
 
             # 并联跨步卷积 start
             x_first = x
-            x = gen_conv(x_first, 4*cnum, 3, rate=4, name='conv7_atrous_top')
-            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv8_atrous_top')
-            x = gen_conv(x, 4*cnum, 3, rate=16, name='conv9_atrous_top')
-            # x = gen_conv(x, 4*cnum, 3, rate=8, name='conv10_atrous_top')
+            x = gen_conv(x_first, 4*cnum, 3, rate=1, name='conv7_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=2, name='conv8_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=4, name='conv9_atrous_top')
+            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv10_atrous_top')
             first_top = x
-            x = gen_conv(x_first, 4*cnum, 3, rate=4, name='conv7_atrous_bottom')
-            # x = gen_conv(x, 4*cnum, 3, rate=4, name='conv8_atrous_bottom')
-            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv8_atrous_bottom')
-            x = gen_conv(x, 4*cnum, 3, rate=16, name='conv9_atrous_bottom')
+            x = gen_conv(x_first, 4*cnum, 3, rate=2, name='conv7_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=4, name='conv8_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=8, name='conv9_atrous_bottom')
+            x = gen_conv(x, 4*cnum, 3, rate=16, name='conv10_atrous_bottom')
             first_bottom = x
             x = tf.concat([first_top, first_bottom], 3)
             # 并联跨步卷积 end
