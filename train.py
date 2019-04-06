@@ -6,7 +6,7 @@ import logging
 import tensorflow as tf
 import neuralgym as ng
 
-from inpaint_model import InpaintCAModel
+from inpaint_model_simple import InpaintCAModel
 
 # use gpu
 # os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID' 
