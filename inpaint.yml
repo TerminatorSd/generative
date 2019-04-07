@@ -2,8 +2,8 @@
 DATASET: 'mine'  # 'tmnist', 'dtd', 'places2', 'celeba', 'celebahq', 'imagenet', 'cityscapes'
 RANDOM_CROP: False
 VAL: False
-LOG_DIR: no_para_no_pre_dog
-MODEL_RESTORE: ''  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
+LOG_DIR: no_para_pre_88_dog
+MODEL_RESTORE: 'release_imagenet_256'  # '20180115220926508503_jyugpu0_places2_NORMAL_wgan_gp_full_model'
 # 20190328095110157180_10-255-0-254_mine_NORMAL_wgan_gp_parallel_dilated_four_conv
 
 GAN: 'wgan_gp'  # 'dcgan', 'lsgan', 'wgan_gp', 'one_wgan_gp'
